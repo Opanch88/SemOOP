@@ -56,15 +56,15 @@ public class Animal {
         System.out.println("Animal sleeping ");
     }
 
-    private void toGo() {
+    public void toGo() {
         System.out.println("The animal is moving ");
     }
 
-    private void fly() {
+    public void fly() {
         System.out.println("The animal is flying ");
     }
 
-    private void swim() {
+    public void swim() {
         System.out.println("The animal swims ");
     }
 
