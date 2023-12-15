@@ -4,7 +4,7 @@ import java.util.List;
 public class Animal {
     protected String name;
     protected LocalDate birthDate;
-    protected List <String> vaccinations;
+    protected List<String> vaccinations;
     protected String illness;
     protected String owner;
 
@@ -36,27 +36,39 @@ public class Animal {
         return owner;
     }
 
-    private void wakeup (){
-        System.out.println("Animal is wakeup !!");
+    private void wakeup() {
+        System.out.println("Animal is wakeup !! ");
     }
 
-    private void wakeup (int time){
+    private void wakeup(int time) {
         System.out.println("Animal is wakeup in " + time);
     }
 
-    private void eat (){
-        System.out.println("Animal ate");
+    private void eat() {
+        System.out.println("Animal ate ");
     }
 
-    private void play (){
-        System.out.println("Animal played");
+    private void play() {
+        System.out.println("Animal played ");
     }
 
-    private void sleep () {
-        System.out.println("Animal sleeping");
+    private void sleep() {
+        System.out.println("Animal sleeping ");
     }
 
-    public void lifeCycle () {
+    private void toGo() {
+        System.out.println("The animal is moving ");
+    }
+
+    private void fly() {
+        System.out.println("The animal is flying ");
+    }
+
+    private void swim() {
+        System.out.println("The animal swims ");
+    }
+
+    public void lifeCycle() {
         wakeup();
         eat();
         play();
