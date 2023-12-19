@@ -20,6 +20,13 @@ public class VeterinaryClinic {
     }
 
     /**
+     * Возвращает список пациентов
+     */
+    public List<Animal> getPatients() {
+        return patients;
+    }
+
+    /**
      * Возвращает бегающих животных
      */
     public List<Goable> getGoables() {
@@ -32,9 +39,26 @@ public class VeterinaryClinic {
     }
 
     /**
-     * Возвращает список пациентов
+     * Возвращает летающих животных
      */
-    public List<Animal> getPatients() {
-        return patients;
+    public List<Flyable> getFlyable() {
+        List<Flyable> result = new ArrayList<>(patients.size());
+        for (Animal animal : patients) {
+            if (animal instanceof Flyable)
+                result.add((Flyable) animal);
+        }
+        return result;
+    }
+
+    /**
+     * Возвращает плавающих животных
+     */
+    public List<Swimable> getSwimable() {
+        List<Swimable> result = new ArrayList<>(patients.size());
+        for (Animal animal : patients) {
+            if (animal instanceof Swimable)
+                result.add((Swimable) animal);
+        }
+        return result;
     }
 }
