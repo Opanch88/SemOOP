@@ -4,24 +4,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Cat barsik = new Cat("Barsik", LocalDate.of(
-                1996, 7, 8),
-                new ArrayList<>(), "Chumka", "Owner Alexei", 4);
-        //System.out.println(barsik);
-        //System.out.println(barsik.getLegsCount());
-
-        Animal eagle = new Eagle("Kesha", LocalDate.of(
-                2000, 8, 9),
-                new ArrayList<>(), "Chumka", "Owner Alexei");
-
-        Animal dog = new Dog("Bul", LocalDate.of(
-                1988, 7, 2),
-                new ArrayList<>(), "Stomach upset ", "Owner Oleg");
-
-        Animal duck = new Duck("Donald", LocalDate.of(
-                2001, 5, 8),
-                new ArrayList<>(), "avian flu", "Owner Petr");
-
+        Cat barsik = new Cat("Barsik", LocalDate.of(1996, 7, 8), new ArrayList<>(), "Chumka", "Owner Alexei", 4);
+        Animal eagle = new Eagle("Kesha", LocalDate.of(2000, 8, 9), new ArrayList<>(), "Chumka", "Owner Alexei");
+        Animal dog = new Dog("Bul", LocalDate.of(1988, 7, 2), new ArrayList<>(), "Stomach upset ", "Owner Oleg");
+        Animal duck = new Duck("Donald", LocalDate.of(2001, 5, 8), new ArrayList<>(), "avian flu", "Owner Petr");
 
         List<Animal> animals = new ArrayList<>();
         animals.add(barsik);
@@ -29,19 +15,6 @@ public class Main {
         animals.add(dog);
         animals.add(duck);
         //System.out.println(animals);
-        //System.out.println("________________________________________");
-
-
-        dog.lifeCycle();
-        dog.toGo();
-        dog.swim();
-        System.out.println(" ");
-        duck.lifeCycle();
-        duck.fly();
-        duck.toGo();
-        duck.swim();
-//        barsik.lifeCycle();
-//        System.out.println(" ");
+        System.out.println(eagle);
     }
-
 }

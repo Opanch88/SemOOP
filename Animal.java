@@ -1,19 +1,21 @@
 import java.time.LocalDate;
 import java.util.List;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected LocalDate birthDate;
     protected List<String> vaccinations;
     protected String illness;
-    protected String owner;
+    protected String ownerName;
+    protected String type;
 
     public Animal(String name, LocalDate birthDate, List<String> vaccinations, String illness, String owner) {
         this.name = name;
         this.birthDate = birthDate;
         this.vaccinations = vaccinations;
         this.illness = illness;
-        this.owner = owner;
+        this.ownerName = owner;
+        this.type = getClass().getSimpleName();
     }
 
     public String getName() {
@@ -33,7 +35,7 @@ public class Animal {
     }
 
     public String getOwner() {
-        return owner;
+        return ownerName;
     }
 
     private void wakeup() {
@@ -56,24 +58,7 @@ public class Animal {
         System.out.println("Animal sleeping ");
     }
 
-    public void toGo() {
-        System.out.println("The animal is moving ");
-    }
-
-    public void fly() {
-        System.out.println("The animal is flying ");
-    }
-
-    public void swim() {
-        System.out.println("The animal swims ");
-    }
-
-    public void lifeCycle() {
-        wakeup();
-        eat();
-        play();
-        sleep();
-    }
+    //public abstract void lifeCycle();
 
     @Override
     public String toString() {
@@ -82,7 +67,7 @@ public class Animal {
                 ", birthDate=" + birthDate +
                 ", vaccinations=" + vaccinations +
                 ", illness='" + illness + '\'' +
-                ", owner='" + owner + '\'' +
+                ", owner='" + ownerName + '\'' +
                 '}';
     }
 }
