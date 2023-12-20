@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class VeterinaryClinic {
     private List<Animal> patients = new ArrayList<>();
@@ -42,12 +43,10 @@ public class VeterinaryClinic {
      * Возвращает летающих животных
      */
     public List<Flyable> getFlyable() {
-        List<Flyable> result = new ArrayList<>(patients.size());
-        for (Animal animal : patients) {
-            if (animal instanceof Flyable)
-                result.add((Flyable) animal);
-        }
-        return result;
+        return patients.stream()
+                .filter(Flyable.class::isInstance)
+                .map(Flyable.class::cast)
+                .collect(Collectors.toList());
     }
 
     /**
