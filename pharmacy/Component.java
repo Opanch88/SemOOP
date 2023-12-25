@@ -1,6 +1,6 @@
 package pharmacy;
 
-public class Component {
+public class Component implements Comparable<Component> {
     private String name;
     private String weight;
     private int power;
@@ -18,5 +18,13 @@ public class Component {
                 ", weight='" + weight + '\'' +
                 ", power=" + power +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Component o) {
+        return Integer.compare(o.power, this.power);
+//        if (this.power > o.power) return -1;
+//        if (this.power < o.power) return  1;
+//        return 0;
     }
 }

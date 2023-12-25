@@ -2,7 +2,10 @@ package pharmacy;
 
 import com.sun.tools.javac.Main;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 public class PharmacyMain {
     public static void main(String[] args) {
@@ -19,6 +22,13 @@ public class PharmacyMain {
         for (Component comp : pharmacy1) {
             System.out.println(comp);
         }
+
+        List<Component> list = new ArrayList<>();
+        list.add(nayz);
+        list.add(paracetamol);
+        list.add(acetyl);
+        Collections.sort(list);
+        System.out.println(list);
 //        while (iterator.hasNext()){
 //            System.out.println(iterator.next());
 //        }
