@@ -1,9 +1,6 @@
 package pharmacy;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class IterablePharmacy implements Iterable<Component> {
     private int index;
@@ -42,6 +39,26 @@ public class IterablePharmacy implements Iterable<Component> {
 //            }
 //        };
 //    }
+@Override
+public String toString() {
+    return "IterablePharmacy{" +
+            "index=" + index +
+            ", components=" + components +
+            '}';
+}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        IterablePharmacy that = (IterablePharmacy) o;
+        return index == that.index && Objects.equals(components, that.components);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(index, components);
+    }
 
 }
 

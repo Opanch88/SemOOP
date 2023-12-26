@@ -2,10 +2,7 @@ package pharmacy;
 
 import com.sun.tools.javac.Main;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class PharmacyMain {
     public static void main(String[] args) {
@@ -54,7 +51,14 @@ public class PharmacyMain {
         IterablePharmacy snotty = new IterablePharmacy();
         snotty.aadComponents(acetyl, nosephrine);
 
-        //System.out.println(snotty);
+
+        Set<IterablePharmacy> result = new HashSet<>();
+        result.add(headaches);
+        result.add(pain);
+        result.add(snot);                            //
+        result.add(cough);
+        result.add(snotty);                          //
+        System.out.println(result.size());
 
 
     }
