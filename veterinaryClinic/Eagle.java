@@ -1,3 +1,7 @@
+import veterinaryClinic.Animal;
+import veterinaryClinic.Flyable;
+import veterinaryClinic.Goable;
+
 import java.time.LocalDate;
 import java.util.List;
 

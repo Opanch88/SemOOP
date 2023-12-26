@@ -1,3 +1,5 @@
+package veterinaryClinic;
+
 public interface Goable {
     double run();
 

@@ -59,6 +59,7 @@ public class PharmacyMain {
         result.add(cough);
         result.add(snotty);                          //
         System.out.println(result.size());
+        System.out.println(result);
 
 
     }
