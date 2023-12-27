@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class Pharmacy implements Iterator<Component> , Copmparable<Pharmacy>{
+public class Pharmacy implements Iterator<Component>{
     private int index;
     private final List<Component> components;
 
@@ -32,11 +32,4 @@ public class Pharmacy implements Iterator<Component> , Copmparable<Pharmacy>{
         return components.get(index++);
     }
 
-    /**
-     *
-     */
-    @Override
-    public void compareTo() {
-
-    }
 }

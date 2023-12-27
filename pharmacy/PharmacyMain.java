@@ -60,7 +60,7 @@ public class PharmacyMain {
         result.add(snotty);                          //
         System.out.println(result.size());
         System.out.println(result);
-
+        System.out.println(list.size());
 
     }
 }
